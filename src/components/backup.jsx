@@ -68,12 +68,12 @@ const generateVideoData = (index) => {
 };
 
 // Generate mock data for all videos
-const mockVideos = Array.from({ length: 16 }, (_, index) => generateVideoData(index));
+const mockVideos = Array.from({ length: 10 }, (_, index) => generateVideoData(index));
 
 const VideoPost = ({ video, isActive }) => {
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState(video.likes);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
